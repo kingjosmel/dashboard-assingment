@@ -667,6 +667,10 @@ video {
   right: 0px;
 }
 
+.top-1 {
+  top: 0.25rem;
+}
+
 .top-0 {
   top: 0px;
 }
