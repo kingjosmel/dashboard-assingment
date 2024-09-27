@@ -8,13 +8,13 @@
 </head>
 <body class="bg-gray-100">
     <main class="relative">
-        <nav class="flex items-center justify-between px-4 font-bold bg-white h-[5rem]">
+        <nav class="flex items-center justify-between px-4 font-bold bg-white h-[5rem] sticky top-0">
             <h2 class="text-2xl">
                 black<span class="text-blue-400">cove</span> <span class="ml-2 text-lg">STUDIO</span>
             </h2>
 
             
-            <div class="flex p-1 pr-6 max-md:hidden">
+            <div class="flex p-1 pr-6 max-md:hidden  ">
                     <svg class="mr-3 w-11 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                       </svg>
@@ -50,16 +50,16 @@
             <p class="ml-2 italic text-gray-400"><a href="">SETTINGS</a></p>
         </header>
         
-        <div id="header" class="absolute right-0 z-10 justify-end hidden ">
-            <header class="p-3 italic text-white bg-slate-800 text-[2rem]  h-[100vh] w-[20rem] flex justify-start flex-col items-end text-right" >
+        <div id="header" class="absolute right-0 z-10 justify-end hidden h-full">
+            <header class="p-3 italic text-white bg-slate-800 text-[2rem]  max-h-full h-[50rem] w-[20rem] flex justify-start flex-col items-end text-right" >
                 <p><a href="">DASHBOARD</a></p>
-                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white" ><a href="">ASSESSMENTS</a></p>
-                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white"><a href="">CUUSTOMERS</a></p>
-                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white"><a href="">SETTINGS</a></p>
+                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white" ><a id="link2" href="#Assessment">ASSESSMENTS</a></p>
+                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white"><a id="link1" href="#customers">CUSTOMERS</a></p>
+                <p class="mt-2 italic text-gray-400 mt-l-2 hover:text-white"><a href="#">SETTINGS</a></p>
             </header>
         </div>
         
-        <section class="p-4 m-4 bg-white rounded-lg shadow min-h-[35rem] flex flex-col justify-between text-[2rem] ">
+        <section id="Assessment" class="p-4 m-4 bg-white rounded-lg shadow min-h-[35rem] flex flex-col justify-between text-[2rem] ">
 
             <h3 class="text-[2rem] font-bold">
                 Recent Assessments
@@ -124,7 +124,7 @@
                 
             </section>
 
-        <section class="p-4 m-4 bg-white rounded-lg shadow min-h-36 text-[2rem] max-sm:text-[0.7rem] " >
+        <section id="customers" class="p-4 m-4 bg-white rounded-lg shadow min-h-36 text-[2rem] max-sm:text-[0.7rem] " >
             <h3>
                 Recent Comments
             </h3>
@@ -174,12 +174,23 @@
 
 <script> 
   const menu = document.getElementById('menu');
+  const customer = document.getElementById('link1')
+  const Assessment = document.getElementById('link2')
+ 
         const header = document.getElementById('header');
 
         menu.addEventListener('click', () => {
-            // Toggle visibility of the header (menu)
+           
             header.classList.toggle('hidden');
         });
+        
+        customer.addEventListener("click", () => {
+   header.classList.toggle('hidden')
+})
+
+Assessment.addEventListener("click", () => {
+    header.classList.toggle('hidden');
+})
 </script>
 </body>
 </html>
