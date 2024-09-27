@@ -14,7 +14,14 @@ module.exports = {
       },
       colors: {
         button: '#63A2B6'
-      }
+      },
+
+      screens: {
+      'max-md': {'max': '786px'},
+      'max-sm': {'max': '425px'}
+
+      },
+
 
     },
   },
